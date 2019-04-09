@@ -3,6 +3,9 @@ package com.mendonca.aop;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -21,16 +24,21 @@ import com.mendonca.model.LinkElement;
 @Component
 public class ControllerAspect {
 
+	/*
+	
 @Autowired	
 private LinkRecordDao linkRecordDao;	
 	
-	
+
+
 @Before("execution(* com.mendonca.controlles.MainController.DisplayPage())")
 public void runBefore(){
 	
-System.out.println("APO run before the method DisplayPage() ");
+System.out.println(" Before the method DisplayPage() ");
 	
 }	
+
+
 	
 @Before("execution(* com.mendonca.controlles.MainController.ListRows())")
 public void runBeforeList(){
@@ -49,6 +57,18 @@ linkRecordDao.updateRow(linkElement);
 }
 
 
+@After("execution(* com.mendonca.controlles.MainController.SaveFirstLink(..))")
+public void runAfterSave(){
+	
+	System.out.println("After the method Save");
+	
+	
+}
+
+
+
+
+
 public LinkRecordDao getLinkRecordDao() {
 	return linkRecordDao;
 }
@@ -57,6 +77,7 @@ public void setLinkRecordDao(LinkRecordDao linkRecordDao) {
 	this.linkRecordDao = linkRecordDao;
 }
 
+*/
 
 
 	

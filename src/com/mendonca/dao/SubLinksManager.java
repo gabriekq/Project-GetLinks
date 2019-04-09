@@ -14,6 +14,10 @@ import java.util.stream.Collectors;
 //import javax.lang.model.element.Element;
 
 
+
+
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,9 +25,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.chrome.ChromeOptions;
 
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
+
 import com.mendonca.model.LinkElement;
 
-//@Component
+@Component
+@Scope(value = WebApplicationContext.SCOPE_REQUEST,proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class SubLinksManager {
 
 	
@@ -36,9 +46,10 @@ public class SubLinksManager {
 		
 	// options = new ChromeOptions();
 	 //options.setHeadless(true);
-	 //System.setProperty("webdriver.chrome.driver", "C:\\Programas mendonca\\chromeDriver\\chromedriver.exe");
-	
-	System.setProperty("webdriver.chrome.driver", "C:\\Programas mendonca\\chromeDriver\\chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "C:\\ProgramasGM\\chromeDriver\\chromedriver.exe");
+	 // recompile
+		
+	//System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 	driver = new ChromeDriver();
 	  
 	
@@ -70,7 +81,8 @@ public class SubLinksManager {
 	public void closeDriver(){
 	Process command;	
 	driver.close();
-		
+
+		/*
 		try{
 			
 			command =  Runtime.getRuntime().exec("tskill chromedriver");
@@ -86,7 +98,7 @@ public class SubLinksManager {
 			exception.printStackTrace();
 		}
 		
-		
+		*/
 		
 		
 		

@@ -12,11 +12,12 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import com.mendonca.aop.ControllerAspect;
 import com.mendonca.controlles.MainController;
 import com.mendonca.dao.LinkRecordDao;
+import com.mendonca.dao.UserLinksDao;
 
 
 @EnableAspectJAutoProxy
 @EnableWebMvc
-@ComponentScan(basePackageClasses={MainController.class,LinkRecordDao.class})
+@ComponentScan(basePackageClasses={MainController.class,LinkRecordDao.class,UserLinksDao.class})
 public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 
 	@Bean

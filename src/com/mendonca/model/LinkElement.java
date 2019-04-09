@@ -22,6 +22,7 @@ private int Id;
 private String webAddress;
 private int accessed;
 
+private long idUser; // this variable will be change soon to many to one - one user has many links
 
 
 public String getWebAddress() {
@@ -39,6 +40,18 @@ public int getAccessed() {
 public void setAccessed(int accessed) {
 	this.accessed = accessed;
 }
+
+public long getIdUser() {
+	return idUser;
+}
+
+public void setIdUser(long idUser) {
+	this.idUser = idUser;
+}
+
+
+
+
 
 
 

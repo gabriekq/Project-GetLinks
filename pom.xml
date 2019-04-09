@@ -14,15 +14,41 @@
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
-      </plugin>
-      <plugin>
+     </plugin>
+   
+   
+   <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <version>2.4</version>
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
-      </plugin>
+      </plugin> 
+   
+   
+      
+      <!-- agora vai-->
+     
+     <plugin>
+			<!-- Build an executable JAR -->
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.4</version>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>com.mendonca.conf.ServletSpringMVC</mainClass>
+					</manifest>
+				</archive>
+			</configuration>
+		</plugin>
+  
+      
+      
+      
+      
+    
     </plugins>
   </build>
   

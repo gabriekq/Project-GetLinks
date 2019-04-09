@@ -1,6 +1,7 @@
 package com.mendonca.test;
 
 import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.transaction.Transactional;
 
@@ -72,11 +73,11 @@ public void testSaveList(){
 
 
 
-
+/*
 @Test
 public void TestListLinks(){
 	
-ArrayList<LinkElement>links =	  linkRecordDao.getAllElements();
+	CopyOnWriteArrayList<LinkElement>links =	  linkRecordDao.getAllElements(1);
 
 System.out.println(links.size());
 
@@ -85,11 +86,11 @@ linkRecordDao.closeTransaction();
 	
 }
 
-
+*/
 @Test
 public void testGetOne(){
 	
-LinkElement linkElement =	 linkRecordDao.getOneElement();
+LinkElement linkElement =	 linkRecordDao.getOneElement(1);
 
 System.out.println(linkElement.getAccessed());
 System.out.println(linkElement.getWebAddress());
